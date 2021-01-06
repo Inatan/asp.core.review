@@ -6,7 +6,7 @@ using System.Linq;
 namespace Alura.WebAPI.WebApp.API
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class LivrosController : ControllerBase
     {
         private readonly IRepository<Livro> _repo;
@@ -19,7 +19,7 @@ namespace Alura.WebAPI.WebApp.API
         [HttpGet]
         public IActionResult ListarLivros()
         {
-            var lista = _repo.All.Select(l => l.ToModel()).ToList();
+            var lista = _repo.All.Select(l => l.ToApi()).ToList();
             return Ok(lista);
         }
 
@@ -31,8 +31,23 @@ namespace Alura.WebAPI.WebApp.API
             {
                 return NotFound();
             }
-            return Ok(model.ToModel());
+            return Ok(model.ToApi());
         }
+
+        [HttpGet("{id}/Capa")]
+        public IActionResult ImagemCapa(int id)
+        {
+            byte[] img = _repo.All
+                .Where(l => l.Id == id)
+                .Select(l => l.ImagemCapa)
+                .FirstOrDefault();
+            if (img != null)
+            {
+                return File(img, "image/png");
+            }
+            return File("~/images/capas/capa-vazia.png", "image/png");
+        }
+
 
         [HttpPost]
         public IActionResult Incluir(LivroUpload model)
