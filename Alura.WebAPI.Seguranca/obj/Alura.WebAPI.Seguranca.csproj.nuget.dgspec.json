@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\inatan.hertzog\\Desktop\\Inatan\\Csharp\\Alura.WebAPI.ProjetoInicial\\Alura.WebAPI\\Alura.WebAPI.Seguranca\\Alura.WebAPI.Seguranca.csproj": {}
+    "C:\\Users\\inatan.hertzog\\Desktop\\Inatan\\Csharp\\Alura.WebAPI.ProjetoInicial\\asp.core.review\\Alura.WebAPI.Seguranca\\Alura.WebAPI.Seguranca.csproj": {}
   },
   "projects": {
-    "C:\\Users\\inatan.hertzog\\Desktop\\Inatan\\Csharp\\Alura.WebAPI.ProjetoInicial\\Alura.WebAPI\\Alura.WebAPI.Seguranca\\Alura.WebAPI.Seguranca.csproj": {
+    "C:\\Users\\inatan.hertzog\\Desktop\\Inatan\\Csharp\\Alura.WebAPI.ProjetoInicial\\asp.core.review\\Alura.WebAPI.Seguranca\\Alura.WebAPI.Seguranca.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\inatan.hertzog\\Desktop\\Inatan\\Csharp\\Alura.WebAPI.ProjetoInicial\\Alura.WebAPI\\Alura.WebAPI.Seguranca\\Alura.WebAPI.Seguranca.csproj",
+        "projectUniqueName": "C:\\Users\\inatan.hertzog\\Desktop\\Inatan\\Csharp\\Alura.WebAPI.ProjetoInicial\\asp.core.review\\Alura.WebAPI.Seguranca\\Alura.WebAPI.Seguranca.csproj",
         "projectName": "Alura.WebAPI.Seguranca",
-        "projectPath": "C:\\Users\\inatan.hertzog\\Desktop\\Inatan\\Csharp\\Alura.WebAPI.ProjetoInicial\\Alura.WebAPI\\Alura.WebAPI.Seguranca\\Alura.WebAPI.Seguranca.csproj",
+        "projectPath": "C:\\Users\\inatan.hertzog\\Desktop\\Inatan\\Csharp\\Alura.WebAPI.ProjetoInicial\\asp.core.review\\Alura.WebAPI.Seguranca\\Alura.WebAPI.Seguranca.csproj",
         "packagesPath": "C:\\Users\\inatan.hertzog\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\inatan.hertzog\\Desktop\\Inatan\\Csharp\\Alura.WebAPI.ProjetoInicial\\Alura.WebAPI\\Alura.WebAPI.Seguranca\\obj\\",
+        "outputPath": "C:\\Users\\inatan.hertzog\\Desktop\\Inatan\\Csharp\\Alura.WebAPI.ProjetoInicial\\asp.core.review\\Alura.WebAPI.Seguranca\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

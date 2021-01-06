@@ -67,9 +67,29 @@ namespace Alura.ListaLeitura.WebApp.Controllers
             {
                 return NotFound();
             }
-            return Json(model.ToModel());
+            //return View(model.ToModel());
+            //XML
+            //JSON
+            model.ImagemCapa = null;
+            return Json(model);
         }
 
+        [HttpGet]
+        public Livro LivroJson(int id)
+        {
+            return _repo.Find(id);
+        }
+
+        [HttpGet]
+        public ActionResult<Livro> LivroHttp(int id)
+        {
+            var livro = _repo.Find(id);
+            if (livro == null)
+            {
+                return NotFound();
+            }
+            return livro;
+        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]

@@ -3068,11 +3068,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\inatan.hertzog\\Desktop\\Inatan\\Csharp\\Alura.WebAPI.ProjetoInicial\\Alura.WebAPI\\Alura.WebAPI.DAL.Livros\\Alura.WebAPI.DAL.Livros.csproj",
+      "projectUniqueName": "C:\\Users\\inatan.hertzog\\Desktop\\Inatan\\Csharp\\Alura.WebAPI.ProjetoInicial\\asp.core.review\\Alura.WebAPI.DAL.Livros\\Alura.WebAPI.DAL.Livros.csproj",
       "projectName": "Alura.WebAPI.DAL.Livros",
-      "projectPath": "C:\\Users\\inatan.hertzog\\Desktop\\Inatan\\Csharp\\Alura.WebAPI.ProjetoInicial\\Alura.WebAPI\\Alura.WebAPI.DAL.Livros\\Alura.WebAPI.DAL.Livros.csproj",
+      "projectPath": "C:\\Users\\inatan.hertzog\\Desktop\\Inatan\\Csharp\\Alura.WebAPI.ProjetoInicial\\asp.core.review\\Alura.WebAPI.DAL.Livros\\Alura.WebAPI.DAL.Livros.csproj",
       "packagesPath": "C:\\Users\\inatan.hertzog\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\inatan.hertzog\\Desktop\\Inatan\\Csharp\\Alura.WebAPI.ProjetoInicial\\Alura.WebAPI\\Alura.WebAPI.DAL.Livros\\obj\\",
+      "outputPath": "C:\\Users\\inatan.hertzog\\Desktop\\Inatan\\Csharp\\Alura.WebAPI.ProjetoInicial\\asp.core.review\\Alura.WebAPI.DAL.Livros\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3092,8 +3092,8 @@
         "netcoreapp2.1": {
           "targetAlias": "netcoreapp2.1",
           "projectReferences": {
-            "C:\\Users\\inatan.hertzog\\Desktop\\Inatan\\Csharp\\Alura.WebAPI.ProjetoInicial\\Alura.WebAPI\\Alura.WebAPI.Model\\Alura.WebAPI.Model.csproj": {
-              "projectPath": "C:\\Users\\inatan.hertzog\\Desktop\\Inatan\\Csharp\\Alura.WebAPI.ProjetoInicial\\Alura.WebAPI\\Alura.WebAPI.Model\\Alura.WebAPI.Model.csproj"
+            "C:\\Users\\inatan.hertzog\\Desktop\\Inatan\\Csharp\\Alura.WebAPI.ProjetoInicial\\asp.core.review\\Alura.WebAPI.Model\\Alura.WebAPI.Model.csproj": {
+              "projectPath": "C:\\Users\\inatan.hertzog\\Desktop\\Inatan\\Csharp\\Alura.WebAPI.ProjetoInicial\\asp.core.review\\Alura.WebAPI.Model\\Alura.WebAPI.Model.csproj"
             }
           }
         }
