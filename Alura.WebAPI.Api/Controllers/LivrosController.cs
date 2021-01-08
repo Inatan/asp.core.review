@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
-namespace Alura.WebAPI.Api.Controllers
+namespace Alura.ListaLeitura.Api.Controllers
 {
     [Authorize]
     [ApiController]

@@ -42,7 +42,7 @@ namespace Alura.WebAPI.AuthProvider
 
                     var token = new JwtSecurityToken(
                         issuer: "Alura.WebApp",
-                        audience: "PostMain",
+                        audience: "Postman",
                         claims: direitos,
                         signingCredentials: credenciais,
                         expires: DateTime.Now.AddMinutes(30)

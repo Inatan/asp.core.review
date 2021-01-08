@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Lista = Alura.ListaLeitura.Modelos.ListaLeitura;
 
-namespace Alura.WebAPI.Api.Controllers
+namespace Alura.ListaLeitura.Api.Controllers
 {
     [Authorize]
     [ApiController]
@@ -40,7 +40,7 @@ namespace Alura.WebAPI.Api.Controllers
             return Ok(colecao);
         }
 
-        [HttpGet("{tipo")]
+        [HttpGet("{tipo}")]
         public IActionResult Recuperar(TipoListaLeitura tipo)
         {
             var lista = CriaLista(tipo);
