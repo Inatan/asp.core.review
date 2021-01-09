@@ -64,7 +64,7 @@ namespace Alura.ListaLeitura.HttpClients
         {
             AddBaererToken();
 
-            HttpResponseMessage resposta = await _httpClient.GetAsync($"listaleitura/{tipo}");
+            HttpResponseMessage resposta = await _httpClient.GetAsync($"ListasLeitura/{tipo}");
 
             //Força a resposta for da famiília 200 caso contrário da exceção
             resposta.EnsureSuccessStatusCode();

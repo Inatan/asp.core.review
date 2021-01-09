@@ -47,12 +47,8 @@ C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\Alura.WebAPI.ProjetoInicial\asp.co
 C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\Alura.WebAPI.ProjetoInicial\asp.core.review\Alura.WebAPI.WebApp\bin\Debug\netcoreapp2.1\Alura.WebAPI.WebApp.pdb
 C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\Alura.WebAPI.ProjetoInicial\asp.core.review\Alura.WebAPI.WebApp\bin\Debug\netcoreapp2.1\Alura.WebAPI.WebApp.Views.dll
 C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\Alura.WebAPI.ProjetoInicial\asp.core.review\Alura.WebAPI.WebApp\bin\Debug\netcoreapp2.1\Alura.WebAPI.WebApp.Views.pdb
-C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\Alura.WebAPI.ProjetoInicial\asp.core.review\Alura.WebAPI.WebApp\bin\Debug\netcoreapp2.1\Alura.WebAPI.DAL.Livros.dll
-C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\Alura.WebAPI.ProjetoInicial\asp.core.review\Alura.WebAPI.WebApp\bin\Debug\netcoreapp2.1\Alura.WebAPI.DAL.Usuarios.dll
 C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\Alura.WebAPI.ProjetoInicial\asp.core.review\Alura.WebAPI.WebApp\bin\Debug\netcoreapp2.1\Alura.WebAPI.Model.dll
 C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\Alura.WebAPI.ProjetoInicial\asp.core.review\Alura.WebAPI.WebApp\bin\Debug\netcoreapp2.1\Alura.WebAPI.Seguranca.dll
-C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\Alura.WebAPI.ProjetoInicial\asp.core.review\Alura.WebAPI.WebApp\bin\Debug\netcoreapp2.1\Alura.WebAPI.DAL.Livros.pdb
-C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\Alura.WebAPI.ProjetoInicial\asp.core.review\Alura.WebAPI.WebApp\bin\Debug\netcoreapp2.1\Alura.WebAPI.DAL.Usuarios.pdb
 C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\Alura.WebAPI.ProjetoInicial\asp.core.review\Alura.WebAPI.WebApp\bin\Debug\netcoreapp2.1\Alura.WebAPI.Model.pdb
 C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\Alura.WebAPI.ProjetoInicial\asp.core.review\Alura.WebAPI.WebApp\bin\Debug\netcoreapp2.1\Alura.WebAPI.Seguranca.pdb
 C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\Alura.WebAPI.ProjetoInicial\asp.core.review\Alura.WebAPI.WebApp\obj\Debug\netcoreapp2.1\Alura.WebAPI.WebApp.csprojAssemblyReference.cache
