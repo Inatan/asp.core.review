@@ -10,6 +10,7 @@ namespace Alura.ListaLeitura.Api.Controllers
     [Authorize]
     [ApiController]
     [ApiVersion("2.0")]
+    [ApiExplorerSettings(GroupName = "v2")]
     [Route("api/[controller]")] // por url [Route("api/V{version:apiVersion}/[controller]")]
     public class Livros2Controller : ControllerBase
     {
@@ -29,11 +30,14 @@ namespace Alura.ListaLeitura.Api.Controllers
                 .AplicaOrdem(ordem)
                 .AplicaPaginacao(paginacao)
                 .Select(l => l.ToApi())
-                .ToLivroPaginado();
+                .ToLivroPaginado(paginacao);
             return Ok(livroPaginado);
         }
 
         [HttpGet("{id}")]
+        [ProducesResponseType(statusCode: 200,Type =typeof(LivroApi))]
+        [ProducesResponseType(statusCode: 500,Type =typeof(ErrorResponse))]
+        [ProducesResponseType(statusCode: 404)]
         public IActionResult Recuperar(int id)
         {
             var model = _repo.Find(id);
@@ -65,11 +69,12 @@ namespace Alura.ListaLeitura.Api.Controllers
             if (ModelState.IsValid)
             {
                 var livro = model.ToLivro();
-                _repo.Incluir(livro);
+                
+                 _repo.Incluir(livro);
                 var uri = Url.Action("Recuperar", new { id = livro.Id });
                 return Created(uri,livro); // 201
             }
-            return BadRequest();
+            return BadRequest(ErrorResponse.FromModelState(ModelState));
         }
 
 

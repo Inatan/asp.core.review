@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Alura.ListaLeitura.Api.Formatters;
 using Alura.ListaLeitura.Modelos;
 using Alura.ListaLeitura.Persistencia;
+using Alura.WebAPI.Api.Filtros;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -35,7 +33,13 @@ namespace Alura.WebAPI.Api
 
             services.AddMvc(options => {
                 options.OutputFormatters.Add(new LivroCsvFormatter());
+                options.Filters.Add(typeof(ErrorResponseFilter));
             }).AddXmlSerializerFormatters();
+
+            services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.SuppressModelStateInvalidFilter = true;
+            });
 
             services.AddAuthentication(options =>
             {
@@ -55,12 +59,20 @@ namespace Alura.WebAPI.Api
                 };
             });
 
+
+
             services.AddApiVersioning(options =>
                 options.ApiVersionReader = ApiVersionReader.Combine(
                     new HeaderApiVersionReader("api-version"),
                     new QueryStringApiVersionReader("api-version")
                 )
             );
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "Livros Api", Description = "Documentação da API", Version = "1.0" });
+                c.SwaggerDoc("v2", new Info { Title = "Livros Api",  Description = "Documentação da API", Version = "2.0" });
+            });
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -73,6 +85,13 @@ namespace Alura.WebAPI.Api
             app.UseAuthentication();
 
             app.UseMvc();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "v2");
+            });
         }
     }
 }
