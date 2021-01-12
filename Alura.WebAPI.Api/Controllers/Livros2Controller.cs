@@ -1,8 +1,9 @@
-﻿using Alura.ListaLeitura.Modelos;
+﻿using Alura.ListaLeitura.Api.Models;
+using Alura.ListaLeitura.Modelos;
 using Alura.ListaLeitura.Persistencia;
-using Alura.WebAPI.Api.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 using System.Linq;
 
 namespace Alura.ListaLeitura.Api.Controllers
@@ -34,6 +35,10 @@ namespace Alura.ListaLeitura.Api.Controllers
         }
 
         [HttpGet("{id}")]
+        [SwaggerOperation(
+            Summary = "Recupera o livro identificado por seu {id}."
+        )]
+        [Produces("application/json")]
         [ProducesResponseType(statusCode: 200,Type =typeof(LivroApi))]
         [ProducesResponseType(statusCode: 500,Type =typeof(ErrorResponse))]
         [ProducesResponseType(statusCode: 404)]
@@ -63,6 +68,7 @@ namespace Alura.ListaLeitura.Api.Controllers
 
 
         [HttpPost]
+        [SwaggerOperation(Summary = "Registra novo livro na base.")]
         public IActionResult Incluir([FromForm] LivroUpload model)
         {
             if (ModelState.IsValid)

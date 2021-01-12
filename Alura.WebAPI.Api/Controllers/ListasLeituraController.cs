@@ -1,7 +1,9 @@
-﻿using Alura.ListaLeitura.Modelos;
+﻿using Alura.ListaLeitura.Api.Models;
+using Alura.ListaLeitura.Modelos;
 using Alura.ListaLeitura.Persistencia;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 using System.Collections.Generic;
 using System.Linq;
 using Lista = Alura.ListaLeitura.Modelos.ListaLeitura;
@@ -21,7 +23,15 @@ namespace Alura.ListaLeitura.Api.Controllers
             _repo = repository;
         }
 
-        private Lista CriaLista(TipoListaLeitura tipo)
+        [HttpGet("{tipo}")]
+        [SwaggerOperation(
+            Summary = "Recupera a lista de leitura identificada por seu {tipo}.",
+            Tags = new[] { "Listas" }
+        )]
+        [Produces("application/json", "application/xml")]
+        [ProducesResponseType(200, Type = typeof(Lista))]
+        [ProducesResponseType(500, Type = typeof(ErrorResponse))]
+        private Lista CriaLista([FromRoute][SwaggerParameter("Tipo da lista a ser obtida.")]  TipoListaLeitura tipo)
         {
             return new Lista
             {

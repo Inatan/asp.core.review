@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using Alura.ListaLeitura.Api.Formatters;
+using Alura.ListaLeitura.Api.Models;
 using Alura.ListaLeitura.Modelos;
 using Alura.ListaLeitura.Persistencia;
 using Alura.WebAPI.Api.Filtros;
@@ -11,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 
 namespace Alura.WebAPI.Api
 {
@@ -72,6 +75,36 @@ namespace Alura.WebAPI.Api
             {
                 c.SwaggerDoc("v1", new Info { Title = "Livros Api", Description = "Documentação da API", Version = "1.0" });
                 c.SwaggerDoc("v2", new Info { Title = "Livros Api",  Description = "Documentação da API", Version = "2.0" });
+                c.EnableAnnotations();
+
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey,
+                    Description = "Autenticação Bearer via JWT",
+                    Scheme = "Bearer"
+                });
+                //adicionando o filtro para incluir respostas 401 nas operações
+                c.OperationFilter<AuthResponsesOperationFilter>();
+                //adicionando o filtro para incluir descrições nas tags
+                c.DocumentFilter<TagDescriptionsDocumentFilter>();
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            },
+                            Name = "Bearer",
+                            In = ParameterLocation.Header,
+                        },
+                        new List<string>()
+                    }
+                });
             });
         }
 

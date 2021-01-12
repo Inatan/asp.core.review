@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Alura.WebAPI.Api.Models
+namespace Alura.ListaLeitura.Api.Models
 {
     public static class LivroPaginadoExtensions
     {

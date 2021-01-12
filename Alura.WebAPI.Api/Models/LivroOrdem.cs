@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Linq.Dynamic.Core;
 
-namespace Alura.WebAPI.Api.Models
+namespace Alura.ListaLeitura.Api.Models
 {
     public static class LivroOrdemExtensions
     {

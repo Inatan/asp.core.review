@@ -1,4 +1,4 @@
-﻿using Alura.WebAPI.Api.Models;
+﻿using Alura.ListaLeitura.Api.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
