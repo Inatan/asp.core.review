@@ -11,7 +11,7 @@ namespace Alura.ListaLeitura.Api.Controllers
     [ApiController]
     [ApiVersion("2.0")]
     [ApiExplorerSettings(GroupName = "v2")]
-    [Route("api/[controller]")] // por url [Route("api/V{version:apiVersion}/[controller]")]
+    [Route("api/livros")] // por url [Route("api/V{version:apiVersion}/[controller]")]
     public class Livros2Controller : ControllerBase
     {
         private readonly IRepository<Livro> _repo;
@@ -28,7 +28,6 @@ namespace Alura.ListaLeitura.Api.Controllers
                 _repo.All
                 .AplicaFiltro(filtro)
                 .AplicaOrdem(ordem)
-                .AplicaPaginacao(paginacao)
                 .Select(l => l.ToApi())
                 .ToLivroPaginado(paginacao);
             return Ok(livroPaginado);
@@ -69,7 +68,6 @@ namespace Alura.ListaLeitura.Api.Controllers
             if (ModelState.IsValid)
             {
                 var livro = model.ToLivro();
-                
                  _repo.Incluir(livro);
                 var uri = Url.Action("Recuperar", new { id = livro.Id });
                 return Created(uri,livro); // 201

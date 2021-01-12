@@ -2,22 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Alura.WebAPI.Api.Models
 {
-    public static class LivroPaginacaoExtensions
-    {
-        public static IQueryable<Livro> AplicaPaginacao(this IQueryable<Livro> query, LivroPaginacao paginacao)
-        {
-            if (paginacao != null)
-            {
-                query = query.Take(paginacao.Tamanho).Skip(paginacao.Pagina);
-            }
-            return query;
-        }
-    }
-
     public static class LivroPaginadoExtensions
     {
         public static LivroPaginado ToLivroPaginado(this IQueryable<LivroApi> query, LivroPaginacao paginacao)
@@ -35,7 +22,7 @@ namespace Alura.WebAPI.Api.Models
                     .ToList(),
                 Anterior = (paginacao.Pagina > 1) ? 
                     $"livros?Tamanho={paginacao.Tamanho}&Pagina={paginacao.Pagina-1}" : "",
-                Proximo = (paginacao.Pagina < totalPaginas) ? "" :
+                Proximo = (paginacao.Pagina+1 > totalPaginas) ? "" :
                     $"livros?Tamanho={paginacao.Tamanho}&Pagina={paginacao.Pagina + 1}",
             };
         }
@@ -58,7 +45,7 @@ namespace Alura.WebAPI.Api.Models
 
     public class LivroPaginacao
     {
-        public int Tamanho { get; set; } = 1;
-        public int Pagina { get; set; } = 10;
+        public int Tamanho { get; set; } = 10;
+        public int Pagina { get; set; } = 1;
     }
 }
